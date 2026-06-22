@@ -1,8 +1,8 @@
-// describe('Verify homepage loads', () => {
-//   it('Opening home page', () => {
-//     cy.visit('https://automationexercise.com')
-//   })
-// })
+describe('Verify homepage loads', () => {
+  it('Opening home page', () => {
+    cy.visit('https://automationexercise.com')
+  })
+})
 
 describe("Register a new user", () => {
   const password = "dhai%1731";
@@ -62,61 +62,61 @@ describe("Register a new user", () => {
   });
 });
 
-// describe('Unsuccessful login with invalid credentials', () => {
-//   it("Error message display", () => {
-//     cy.visit("https://automationexercise.com");
+describe('Unsuccessful login with invalid credentials', () => {
+  it("Error message display", () => {
+    cy.visit("https://automationexercise.com");
 
-//     cy.get('li a[href="/login"]').click();
+    cy.get('li a[href="/login"]').click();
 
-//     cy.get('[data-qa="login-email"]').type('mygmail@gmail.com');
-//     cy.get('[data-qa="login-password"]').type('mypassword123');
-//     cy.get('[data-qa="login-button"]').click();
-//   });
-// })
+    cy.get('[data-qa="login-email"]').type('mygmail@gmail.com');
+    cy.get('[data-qa="login-password"]').type('mypassword123');
+    cy.get('[data-qa="login-button"]').click();
+  });
+})
 
-// describe('Searched product results are related to the product', () => {
-//   it("Search for a product", () => {
-//     cy.visit("https://automationexercise.com");
+describe('Searched product results are related to the product', () => {
+  it("Search for a product", () => {
+    cy.visit("https://automationexercise.com");
 
-//     cy.get('li a[href="/products"]').click();
-//     cy.get('#search_product').type('dress');
-//     cy.get('#submit_search').click();
-//   })
-// })
+    cy.get('li a[href="/products"]').click();
+    cy.get('#search_product').type('dress');
+    cy.get('#submit_search').click();
+  })
+})
 
-// describe('Full product details display', () => {
-//   it("Views product details of the first product", () => {
-//     cy.visit("https://automationexercise.com");
+describe('Full product details display', () => {
+  it("Views product details of the first product", () => {
+    cy.visit("https://automationexercise.com");
 
-//     cy.get('li a[href="/products"]').click();
-//     cy.get('li a[href="/product_details/1"]').click();
-//   })
-// })
+    cy.get('li a[href="/products"]').click();
+    cy.get('li a[href="/product_details/1"]').click();
+  })
+})
 
-// describe('Cart functionality', () => {
-//   it("adds a product to cart", () => {
-//     cy.visit("https://automationexercise.com");
+describe('Cart functionality', () => {
+  it("adds a product to cart", () => {
+    cy.visit("https://automationexercise.com");
 
-//     cy.get('li a[href="/products"]').click();
-//     cy.get('a[data-product-id="1"]').first().click();
-//     cy.get('a').contains('View Cart').click();
-//   })
-// })
+    cy.get('li a[href="/products"]').click();
+    cy.get('a[data-product-id="1"]').first().click();
+    cy.get('a').contains('View Cart').click();
+  })
+})
 
-// describe('Cart functionality', () => {
-//   it("removes a product from the cart", () => {
-//     cy.visit("https://automationexercise.com");
+describe('Cart functionality', () => {
+  it("removes a product from the cart", () => {
+    cy.visit("https://automationexercise.com");
 
-//     cy.get('li a[href="/products"]').click();
-//     cy.get('a[data-product-id="1"]').first().click();
+    cy.get('li a[href="/products"]').click();
+    cy.get('a[data-product-id="1"]').first().click();
 
-//     // Navigate into the shopping cart page via the modal pop-up link
-//     cy.get('a').contains('View Cart').click();
+    // Navigate into the shopping cart page via the modal pop-up link
+    cy.get('a').contains('View Cart').click();
 
-//     // Click the delete "X" button inside the cart table layout
-//     cy.get('a.cart_quantity_delete').click();
-//   })
-// })
+    // Click the delete "X" button inside the cart table layout
+    cy.get('a.cart_quantity_delete').click();
+  })
+})
 
 describe("Contact form", () => {
   it("Successful form submission", () => {
